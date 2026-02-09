@@ -130,8 +130,16 @@ print("I am Rafiul and I am from "Bangladeshl."")\
 print("I am Rafiul and I am from \"Bangladesh.\"")
 
 print(" \'Hi !\' Iam Rafi. Iam from \'Bangladesh.\' ")
-
+-----------------------------------------------------------------------------------------------------------------------------
 print(" \'Hi!\' Iam Rafiul Islam Rakib. Iam from \'Gaibandha.\'")
+
+
+
+============================================================================================================================================================
+
+#String Formatting Operator:
+age = 25
+print("My age is %d" % age)
 
 print(" \'Hello!\' Iam Fahad Islam. Iam from \'Bougura\' ")
 
