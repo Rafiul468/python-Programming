@@ -1,0 +1,187 @@
+=> Interpolation:
+-> Interpolation is the insertion fo something of a different nature into something else.
+//
+
+=> String Interpolation or String formatting:
+-> The process of inserting on oboject into a predefined is called string interpolation or string formatting.
+
+
+======================================================================================================================================================================
+
+
+=> %-formatting:
+
+name="Rafi"
+print("My name is %s." %name)
+
+A="Islam"
+print("His Name is %s."%A)
+
+number=55
+print("The Integer number is %d" %number)
+
+num=70285
+print("The float number is %f" %num)
+
+num=5.02
+print("The Double number is %d" %num)
+
+name='Rafiul'
+city='Bangladesh'
+print("My name is %s and I live in %s 😂." %(city,name))
+
+name="Rakib"
+address="Gaibandha sadar Gaibandha"
+print("I am %s And My address %s." %(name,address))
+
+
+
+======================================================================================================================================================================
+
+
+
+=> Str.formate() Function:
+
+name="Rakib"
+city="Dhaka"
+print("My name is {} and I live in {}." .format(name,city))
+
+
+name="Jaspreet"
+city="Delhi"
+print("My name is {} and I live in {}." .format(name,city) )
+
+
+anamle="Pet"
+name="cow"
+stracture="Fore legs"
+print("The cow is {} anamel. It's name is {}. It's {}." .format(anamle, name, stracture))
+
+name="Rakib"
+city="Rangpur"
+print("My name is {0} and I live in {1}." .format(name, city))
+
+n="Rafiul"
+d="CST"
+print("My name is {name} and I stady is {dip}." .format(name=n,dip=d))
+
+
+
+
+n="Jaspreet"
+c="Delhi"
+print("My name is {name} and I live in {city} ." .format(name=n,city=c))
+
+print("I got {0:f}% marks in English." .format(55.01))
+
+print("I got {0:f}% marks in English." .format(55))
+
+print("I got {0:f}% marks in English." format('55'))      //Error
+
+print("I got {0: .2f}% marks in English." .format(55.25514777))
+
+
+
+
+
+======================================================================================================================================================================
+
+
+
+
+
+=> f-String:
+
+name="Rakib"
+city="Rangpur"
+print(f"My name is {name} and I live in {city}.")
+
+
+dip="CST"
+result=3.25
+print(f"My Depertment is {dip} and My CGPA {result}.")
+
+
+name="Rakib"
+Fri="Rahyan"
+Dip="EEE"
+print(f"Iam {name}. Iam a Student. I have one friend, his name is {Fri} And his stady from {Dip} Depertment.")
+
+
+name="Jaspreet"
+city="Delhi"
+print(f"My name is {name} and I live in {city}.")
+print(F"My name is {name} and I live in {city}.")
+
+
+
+name="Jaspreet"
+city="Delhi"
+print(f"My name is {name.upper()} and I live in {city.upper()}.")
+
+name="Rafiul"
+Dip="computer science and technology"
+result="3.50"
+A="cgpa"
+print(f"Iam {name.upper()}. I am a Student of {Dip.upper()} & My {A.upper()} {result.lower()}")
+
+
+
+name="RAFIUL ISLAM"
+dip="COMPUTER SCIENCE & TECHNOLOGY"
+print(f"My name is {name.lower()} , I am a student of {dip.lower()}")
+
+
+
+name="Jaspreet"
+age=25
+gender='Male'
+introduction=f"My name is {name}."\
+f"My age is {age}."\
+f"I am a {gender}."
+print(introduction)
+
+
+name="Rafiul"
+age="25"
+gender="Male"
+introduction=(f"My name is {name}."
+f"My age is {age}."
+f"Iam a {gender}.")
+print(introduction)
+
+
+name='x'
+age=12
+gender="Male"
+introduction=f""" My name is {name}
+My age is {age}
+I am a {gender}."""
+print(introduction)
+
+
+
+
+print(f"{'Jaspreet'}")
+
+print(f'{"Jaspreet"}')
+
+print(f"""Jaspreet""")
+
+print(f'''Jaspreet''')
+
+
+
+print(f"Iam \"Jaspreet\" and  I live in \"Delhi\".")
+
+
+
+x=50
+y=20
+print(f"The result of x+y is {x+y}.")
+
+print(f"The result of {{x+y}} is {x+y}.")
+
+print(f"The result of {{x+y}} is {{{x+y}}}.")
+
+
