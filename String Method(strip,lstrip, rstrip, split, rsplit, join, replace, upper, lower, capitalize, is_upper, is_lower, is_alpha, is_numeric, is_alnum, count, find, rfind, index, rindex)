@@ -1,0 +1,304 @@
+=> Strip() Method:-
+#সামনের ও পিছনের Word মুছে ফেলে। 
+print("  Hello word  ".strip( ))
+print("#Hello Word#".strip('#'))
+print("###Hello # Word#".strip('#'))
+print("$Hello Word#".strip('$#'))
+print(" ##Hello Word##".strip('#'))
+
+print("Hello Word".strip('ldoH'))
+print("Hello Word".strip('Werd'))
+print("Hello Word".strip('ldoh'))
+print("Hello Word".strip('elloo'))
+print("  Hello Word  ".strip(' '))
+
+
+
+=========================================================================================================================================================================
+
+
+
+=> lstrip( ) Method:-
+#শুধু সামনের দিকের Word মুছে ফেলে।
+
+print(" Hello Word ".lstrip(' '))
+print("$$Hello Word$$".lstrip('$'))
+print("##Hello Word##".lstrip('#'))
+print("$$#Hello Word#$$".lstrip('$#'))
+print("  ###Hello Word##".lstrip('#'))
+
+
+======================================================================================================================================================================
+
+
+
+=> rstrip( ) Method:-
+#শুধু ডান দিকের Word মুছে ফেলে।
+print("  Hello Word   ".rstrip(' '))
+print("###Hello Word###".rstrip('#'))
+print(" ##Hello Word##".rstrip('#'))
+print("###Hello Word ###".rstrip('#'))
+print("$#$Hello Word$#$$".rstrip('#$'))
+
+
+
+
+=====================================================================================================================================================================
+
+
+
+
+
+=> Split( )Method:-
+
+Syntax:
+   string.split(sparator,maxsplit)
+
+
+print("Hello! $ I $ am $ Jaspreet".split('$',maxsplit=2))
+print("H! $ I $ am $ Rafiul. I $ read $ CST $ Depertment".split('$',maxsplit=3))
+print("Hello! $ I # am # RAFIUL $. I # am # a $ student".split('$ #',maxsplit=2))
+print("Hello! $ I $ am $ Rakib.".split(' '))
+print("Hello! I am Rafiul.".split(' '))
+
+
+
+
+=====================================================================================================================================================================
+
+
+
+
+
+=> rsplit( ) Method:-
+
+Syntax:-
+       string.rsplit(separator,maxsplit)
+
+
+
+print("Hello $ I $ am $ Jaspreet.".rsplit('$',maxsplit=2))
+print("Hello! $ I $ am $ Jaspreet$. I $ live $ In $ Delhi.".rsplit('$',maxsplit=3))
+print("Hello!$I$am$Rafiul.".rsplit('$',maxsplit=2))
+print("Hello! I am Rafiul.".rsplit(' '))
+print("Hello! I am Rafiul.".rsplit(' ', maxsplit=3))
+
+
+
+
+=====================================================================================================================================================================
+
+
+
+
+=> Join ( ) Method:-
+
+Syntax:-
+       separator. join(interable)
+
+
+
+l1='H','e','l','l','o'
+print(''.join(l1))
+
+l2=' I ',' am ',' Rakib.'
+print(''.join(l2))
+
+l3='Hi! ','I ','am ','Rafiul.'
+print(''.join(l3))
+
+l4='name','of','the','veriable'
+print('_'.join(l4))
+
+
+d={'name ':'Adan','country ':'US'}
+print('and '.join(d))
+
+d={'roll ': '811476 ', 'dip ': 'CST'}
+print('and '.join(d))
+
+d={'RAFIUL ':' name',' CST':' Dipertment' }
+print('and'.join(d))
+
+d={'Rafiul':'name','CST':'DIPERTMENT'}
+print(' and '.join(d))
+
+
+
+
+==================================================================================================================================================================
+
+
+
+
+
+
+=> replace( ) Method:-
+
+Syntax:-
+      String.replace(Old_String, New_String.count)
+
+
+
+s="I love to eat strawberries."
+print(s.replace('strawberries','Mangos'))
+
+x="I read in \'EEE\' Depertment."
+print(x.replace('EEE','CST'))
+
+y="I am \'RAFIUL\' Islam. I read in 'EEE' Depertment."
+print(y.replace('RAFIUL','Rakib'))
+
+
+
+s="I love to eat Strawberries."
+print(s.replace(' ','_',2))
+
+s="I eat Banana."
+print(s.replace(' ','_',2))
+
+s="I am Rafiul."
+print(s.replace('_',2)) //Type Error
+
+s="Hi! I am Rakib"
+print(s.replace(' ','-',3))
+
+p="I love \'Bangladesh\'."
+print(p.replace(' ','_',2))
+
+
+
+
+
+
+======================================================================================================================================================================
+
+
+
+=> Upper()Method:
+
+print("Hello! I am Rafiul".upper())
+print("hello! i am rafiul".upper())
+
+
+======================================================================================================================================================================
+
+
+
+=> Lower()Method:
+
+print("Hello! I am Rafiul".lower())
+print("HELLO! I AM RAFIUL ISLAM".lower())
+
+
+=====================================================================================================================================================================
+
+
+
+=> Capitalize()Method:
+
+print("maruti suzuki".capitalize())
+print("maruti Suzuki".capitalize())
+print("Maruti Suzuki".capitalize())
+
+
+=====================================================================================================================================================================
+
+
+
+=> isupper()Method:
+
+print("Hello! Friends".isupper())
+print("Hello! FRIEDNS".isupper())
+print("HELLO! FRIENDS".isupper())
+
+
+======================================================================================================================================================================
+
+
+=> islower()Method:
+print("hello! Friends".islower())
+print("hello! friends".islower())
+
+
+======================================================================================================================================================================
+
+
+
+=> Lisalpha()Method:
+print("2Hello!".isalpha())
+print("Hello! @Everyone".isalpha())
+print("Hello! Everyone".isalpha())
+print("Hello, everyone".isalpha())
+print("Hello Everyone".isalpha())
+print("Hi_I_am_Rafiul".isalpha())
+
+print("HiIamRafiul".isalpha())
+
+
+
+======================================================================================================================================================================
+
+
+
+=> isnumaric()Method:
+
+print("13131543323".isnumeric())
+print("3.14159".isnumeric())
+print("2/4".isnumeric())
+print("3*4".isnumeric())
+print("4+5".isnumeric())
+
+
+======================================================================================================================================================================
+
+
+
+=> isalnum()Method:
+print("Hello2026".isalnum())
+print("2164653".isalnum())
+print("Rafiul".isalnum())
+print("HiIamRafiul".isalnum())
+
+print("Sam is good in sports".isalnum())
+
+
+
+======================================================================================================================================================================
+
+
+
+=> count()Method:
+print("I love fruits, fruits make me healthy".count('fruits'))
+print("I love fruits, fruits make me healthy, fruits is very testy fruits".count('fruits'))
+print("I love fruits, Fruits make me healthy".count('fruits'))
+print("I love fruits, fruits make me healthy".count('fruits',3,13))
+print("I love fruits, fruits make me healthy".count('fruits',2,25))
+print("I love fruits, fruits make me healthy".count('fruits',1,5))
+
+
+
+======================================================================================================================================================================
+
+
+
+=> find()Method:
+print("Python is a beautiful language".find('b'))
+print("Python is a beautiful language".find('a',1,22))
+print("Python is a beautiful language".find('b',1,5)
+
+
+======================================================================================================================================================================
+
+=> rfind()Method:
+print("Python is a beautiful language".rfind('e'))
+print("Python is a beautiful language".rfind('e',1,5))
+
+
+======================================================================================================================================================================
+
+
+=> rindex()Method:
+print("python is a beautiful language".rindex('e'))
+print("python is a beautiful language".rindex('e',1,5))
+
