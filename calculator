@@ -1,0 +1,164 @@
+import tkinter as tk
+
+root = tk.Tk()
+root.title("Python Calculator")
+root.geometry("420x620")
+root.resizable(False, False)
+root.configure(bg="#202124")
+
+expression = ""
+history = []
+
+display = tk.Entry(
+    root,
+    font=("Arial", 24),
+    bg="#303134",
+    fg="white",
+    bd=0,
+    justify="right"
+)
+display.pack(fill="x", padx=10, pady=10, ipady=20)
+
+history_box = tk.Text(
+    root,
+    height=6,
+    font=("Arial", 11),
+    bg="#171717",
+    fg="white"
+)
+history_box.pack(fill="x", padx=10)
+
+
+def update_display():
+    display.delete(0, tk.END)
+    display.insert(tk.END, expression)
+
+
+def press(value):
+    global expression
+    expression += str(value)
+    update_display()
+
+
+def clear():
+    global expression
+    expression = ""
+    update_display()
+
+
+def backspace():
+    global expression
+    expression = expression[:-1]
+    update_display()
+
+
+def equal():
+    global expression
+
+    try:
+        result = str(eval(expression))
+
+        history.append(expression + " = " + result)
+
+        history_box.delete(1.0, tk.END)
+
+        for item in history[-10:]:
+            history_box.insert(tk.END, item + "\n")
+
+        with open("history.txt", "a") as file:
+            file.write(expression + " = " + result + "\n")
+
+        expression = result
+
+    except:
+        expression = "Error"
+
+    update_display()
+
+
+def make_button(text, row, col, color="#3c4043"):
+
+    button = tk.Button(
+        frame,
+        text=text,
+        font=("Arial", 18, "bold"),
+        bg=color,
+        fg="white",
+        activebackground="#5f6368",
+        relief="flat",
+        command=lambda: button_click(text)
+    )
+
+    button.grid(
+        row=row,
+        column=col,
+        sticky="nsew",
+        padx=3,
+        pady=3
+    )
+
+
+def button_click(value):
+
+    if value == "=":
+        equal()
+
+    elif value == "AC":
+        clear()
+
+    elif value == "⌫":
+        backspace()
+
+    else:
+        press(value)
+
+
+frame = tk.Frame(root, bg="#202124")
+frame.pack(expand=True, fill="both")
+
+for i in range(5):
+    frame.rowconfigure(i, weight=1)
+
+for i in range(4):
+    frame.columnconfigure(i, weight=1)
+
+
+buttons = [
+
+["AC", "⌫", "%", "/"],
+
+["7", "8", "9", "*"],
+
+["4", "5", "6", "-"],
+
+["1", "2", "3", "+"],
+
+["0", ".", "**", "="]
+
+]
+
+colors = {
+
+    "AC": "#D32F2F",    
+    "⌫": "#FB8C00",      
+
+    "+": "#1976D2",      
+    "-": "#1976D2",
+    "*": "#1976D2",
+    "/": "#1976D2",
+    "%": "#1976D2",
+    "**": "#1976D2",
+
+    "=": "#2E7D32"      
+}
+
+for r, row in enumerate(buttons):
+
+    for c, item in enumerate(row):
+
+        color = colors.get(item, "#3c4043")
+
+        make_button(item, r, c, color)
+
+
+root.mainloop()
